@@ -1,0 +1,5 @@
+apt-clone clone foo
+
+
+apt-get install apt-clone
+apt-clone restore foo.apt-clone.tar.gz

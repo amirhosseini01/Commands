@@ -1,0 +1,13 @@
+docker pull mysql
+
+docker run --name <container name> -e MYSQL_ROOT_PASSWORD=1234 -d mysql
+
+docker pull phpmyadmin/phpmyadmin
+
+
+docker run --name <container name> -d --link <mySql container name>:db -p 8081:80 phpmyadmin/phpmyadmin
+
+
+http://localhost:8081/
+username:root
+password:1234

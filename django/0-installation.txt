@@ -1,0 +1,45 @@
+- install virtual env for installing different version of django:
+	pip install virtualenv
+
+- open terminal and create virtual environment:
+	python3 -m virtualenv <your environment name>
+	ex:
+	python3 -m virtualenv env
+
+- to create env, cd to create folder and run:
+	source bin/activate
+
+- to exit:
+	deactivate
+
+----
+
+--- django commands ---
+
+django-admin startproject <project name>
+python manage.py runserver
+python manage.py runserver --insecure
+
+# u can cd to project or change manage.py path to execute command:
+python manage.py startapp <app name>
+{
+	- to add app in the main proj, follow the below path:
+		main project ->  settings.py -> INSTALLED_APPS
+	- add your app config class from:
+		your app -> apps.py ('projects.app.ProjectsConfig',)
+}
+
+
+--- db settings ---
+
+- create admin panel
+	python manage.py migrate
+	python manage.py createsuperuser
+
+- add model
+	add your model
+	run below commands
+		python manage.py makemigrations
+		python manage.py migrate
+	register model in admin
+	change table col in model file (optional)
