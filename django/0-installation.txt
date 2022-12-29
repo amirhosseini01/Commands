@@ -8,6 +8,8 @@
 
 - to create env, cd to create folder and run:
 	source bin/activate
+	or if your virtual environment name is env you can run this in root:
+		source env/bin/activate
 
 - to exit:
 	deactivate
