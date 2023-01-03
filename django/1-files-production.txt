@@ -1,0 +1,26 @@
+files in productions tips
+
+- when debug in False in settings ...
+
+- we should fill "ALLOWED_HOSTS" var with our domain ...
+- ex: ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+- and we had to collect statics 
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    python manage.py collectstatic
+
+- in main project, and "urls.py" add below code:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+- install "whitenoise" pip package:
+    pip install whitenoise
+
+- add "whitenoise" to "MIDDLEWARE":
+    like: 
+    MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    .
+    .
+    .
