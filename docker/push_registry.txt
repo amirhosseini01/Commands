@@ -1,0 +1,12 @@
+docker push tag registry
+
+
+sudo docker tag <image id> <registry full http address>
+sudo docker tag b546e82a6d0e registry.gitlab.com/yourRep/yourRep
+.
+.
+.
+sudo docker push <registry full http address>
+sudo docker push registry.gitlab.com/yourRep/yourRep
+
+

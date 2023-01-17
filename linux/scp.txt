@@ -1,0 +1,14 @@
+sudo scp -P 2222 lab@178.216.248.50:/opt/db_backups/backups/db-backup-2023-01-01-01-00-01.sql.gz ./db_backup
+
+# copy to server:
+    scp <file> <username>@<IP address or hostname>:<Destination>
+    scp "TPS Reports.odw" joe@laptop:Desktop/
+
+    The -r (recursive) option means to copy the whole folder and any sub-folders. You can also copy files the other way: 
+    scp -r catbert@192.168.1.103:/home/catbert/evil_plans/ .
+    
+    # ** from local to server **
+    scp -r /media/disk/summer_pics/ mike@192.168.1.1:"/var/www/Summer 2008/"
+
+
+# this command can use vice versa

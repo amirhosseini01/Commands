@@ -1,5 +1,34 @@
 install docker
 
+#manually:
+install docker manualy 
+
+1- Go to https://download.docker.com/linux/ubuntu/dists/.
+
+2- Select your Ubuntu version in the list.
+you can see using following commands:
+lsb_release -a 
+uname -a
+
+
+3- Go to pool/stable/ and select the applicable architecture (amd64, armhf, arm64, or s390x).
+
+
+4- Download the following deb files for the Docker Engine, CLI, containerd, and Docker Compose packages:
+
+    containerd.io_<version>_<arch>.deb
+    docker-ce_<version>_<arch>.deb
+    docker-ce-cli_<version>_<arch>.deb
+    docker-compose-plugin_<version>_<arch>.deb
+    
+5-    
+sudo dpkg -i ./containerd.io_<version>_<arch>.deb \
+  ./docker-ce_<version>_<arch>.deb \
+  ./docker-ce-cli_<version>_<arch>.deb \
+  ./docker-compose-plugin_<version>_<arch>.deb
+
+
+# using repository
 sudo apt-get update
 
  sudo chmod a+r /etc/apt/keyrings/docker.gpg
