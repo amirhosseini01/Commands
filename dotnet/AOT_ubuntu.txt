@@ -1,0 +1,22 @@
+1. install clang zlib1g-dev apt:
+    sudo apt-get install clang zlib1g-dev
+
+    # tip, u can install locally by flowing below steps:
+    1- access to your specific directory:
+        sudo chown _apt ~/
+    2- if you want to save file on your pc:
+        sudo apt download clang zlib1g-dev
+    3- unpack:
+        sudo dpkg -i yourPackageName.deb
+
+2. add this config in your project file (.csproj):
+    <PublishAot>true</PublishAot>
+
+3. publish your project:
+    dotnet publish -r linux-x64 -c Release -o yourOutDir
+    dotnet publish -r linux-arm64 -c Release -o yourOutDir
+
+    # this will produce single file
+
+4. run your file using:
+    ./yourProjName
