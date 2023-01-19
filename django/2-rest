@@ -1,0 +1,8 @@
+1. installation:
+    pip install djangorestframework
+
+2. setting.py:
+    add below config to "INSTALLED_APPS" section:
+    'rest_framework'
+
+now u can use this module in your proj ...
