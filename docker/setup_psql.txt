@@ -1,0 +1,21 @@
+setup psql using docker
+
+
+1. up psql image:
+    sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+2. up pgadmin image:
+    sudo docker run -p 5050:80     -e "PGADMIN_DEFAULT_EMAIL=user@domain.com"     -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret"     -d dpage/pgadmin4
+
+3. inspect the postgres image for find the url to connect.
+    1. use can use it in below way:
+        sudo docker inspect <docker container id>
+        explore and look for "IPAddress" (this will be your server address)
+    
+    2. connect to pgadmin4 (it is obvious from sudo docker ps -a command)  
+
+    3. provide password that you mention in posql docker image
+    
+    4. for username and database provide default user value: "postgres"
+
+4. enjoy
