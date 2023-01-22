@@ -1,0 +1,13 @@
+1. "ALLOWED_HOSTS"
+    add your domain into setting.py in "ALLOWED_HOSTS"
+    and this don,t need http ...
+
+2. set "DEBUG" into "False"
+
+3. define your pip required packages depend on your pipenv:
+    my case:
+        pip freeze > Requirements.txt
+4. define you current version on python:
+    my case:
+        file > runtime.txt
+        file content > python-3.10.7
