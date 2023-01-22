@@ -1,0 +1,20 @@
+1. install below package:
+    linux: pip install psycopg2-binary
+    win: pip install psycopg2
+
+2. change setting.py into bellow config:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'mysecretpassword',
+        'HOST': '172.17.0.2',
+        'PORT': '5432',
+    }
+}
+
+3. run migrations:
+    python manage.py migrate
+
