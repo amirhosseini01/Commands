@@ -1,3 +1,21 @@
+1. download your package:
+    sudo apt download packageName
+    ex:
+    sudo apt download gparted-common
+
+2. unpack your package:
+    sudo dpkg -i packageName.deb
+    ex:
+    sudo dpkg -i gparted_1.3.1-1ubuntu1_amd64.deb
+    tip:
+        if you encounter any error, read message.
+        if error was as result of "dependency problems", 
+        then simply download in unpack dependencies first ...
+
+
+
+
+// third party
 apt-clone clone foo
 
 
