@@ -3,3 +3,7 @@ then add these file into "~/.profile" or "~/.bash_profile"
 
 export DOTNET_ROOT="$HOME/u/my_env/dotnet"
 export PATH="$PATH:$HOME/u/my_env/dotnet"
+
+
+if you install tools like ef, also export this:
+    dotnet tool install --global dotnet-ef
