@@ -1,1 +1,5 @@
 sudo chmod -R 777 ~/.dotnet
+
+add user:
+adduser lab
+usermod -aG sudo lab

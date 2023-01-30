@@ -1,2 +1,6 @@
 #file size:
 du -sh <folder or file name
+
+
+find file:
+find / -type f -name "searchMe"
