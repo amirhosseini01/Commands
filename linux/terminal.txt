@@ -1,0 +1,2 @@
+1. clear history:
+    history -c
