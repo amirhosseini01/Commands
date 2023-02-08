@@ -1,2 +1,11 @@
-1. clear history:
+1. history:
     history -c
+
+2. process or port:
+    sudo lsof -t -i:<your port>
+    sudo lsof -t -i:3000
+
+    kill:
+        sudo kill -9  `sudo lsof -t -i:3000`
+    if dose not work:
+        sudo kill -9  $(sudo lsof -t -i:3000)
