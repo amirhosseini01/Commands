@@ -6,6 +6,7 @@
 
     list of db:
     \l
+    \l .
 
     list of all user:
     \du
