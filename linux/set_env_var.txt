@@ -2,6 +2,7 @@
 	sudo apt install vim
 2- open this file using vim:
 	sudo vim ~/.profile
+	sudo vim ~/.bash_profile
 3- add this command to the end of the file
 	export PATH="$PATH:$HOME/my_env/dotnet"
 
