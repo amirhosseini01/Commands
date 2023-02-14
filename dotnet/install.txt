@@ -7,3 +7,6 @@ export PATH="$PATH:$HOME/u/my_env/dotnet"
 
 if you install tools like ef, also export this:
     dotnet tool install --global dotnet-ef
+
+    add this command:
+    export PATH="$PATH:$HOME/.dotnet/tools"
