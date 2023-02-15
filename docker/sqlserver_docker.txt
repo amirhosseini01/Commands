@@ -3,13 +3,8 @@ sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" 
    -d \
    mcr.microsoft.com/mssql/server:2022-latest
     
-   
-   
-   
-   
-   
-   
-   
+
+
    sudo docker ps -a
    
    
