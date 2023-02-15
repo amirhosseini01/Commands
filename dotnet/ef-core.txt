@@ -1,0 +1,7 @@
+1. ignore specific DbSet for migration (use when we want execute raw query by ef core < 7):
+    public virtual DbSet<your-view-model> your-view-model {get; set;}
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<your-view-model>().ToTable(nameof(your-view-model), t=> t.ExcludeFromMigrations());
+    }
