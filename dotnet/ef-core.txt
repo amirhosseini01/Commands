@@ -5,3 +5,31 @@
     {
         modelBuilder.Entity<your-view-model>().ToTable(nameof(your-view-model), t=> t.ExcludeFromMigrations());
     }
+
+    # in ef 7 > ... you can execute raw query without specify type in your dbContext
+        context.Database
+        .SqlQuery<int>($"SELECT [BlogId] AS [Value] FROM [Blogs]")
+        .Where(id => id > context.Blogs.Average(b => b.BlogId))
+
+
+2. Inheritance (TPH, TPT, TPC):
+    TPH: using single table for all heritage types and separate them using "Discriminator"
+        column that not specify in models.
+
+        when query in sub models, no extra row will loaded. but when you query in base model all rows
+        will displayed.
+        
+        your cant put filter for separator column, it will throw exception. do it instead:
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        modelBuilder.Entity<Blog>()
+            .HasDiscriminator()
+            .IsComplete(false);
+        }
+
+
+    
+    TPT: using table per each type and using foreign key to separate them.
+
+    TPC: all columns repeat in db and models.
