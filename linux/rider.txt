@@ -1,0 +1,6 @@
+- download from original website
+- extract to specific location
+- go to bin folder 
+- run install.sh in the ja-netfilter
+- edit the rider64.vmoptions file in the bin folder (the new variables exist in the ja-netfilter/vmoptions)
+- restart and run
